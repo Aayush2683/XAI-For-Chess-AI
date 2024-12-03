@@ -1,0 +1,208 @@
+
+            <html>
+            <head>
+                <title>Detailed Explanations</title>
+                <style>
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    th, td {
+                        border: 1px solid black;
+                        padding: 8px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #f2f2f2;
+                    }
+                    .highlight {
+                        background-color: #ffeb3b;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Detailed Explanations</h1>
+                <h2>Feature Meanings</h2>
+                <p><b>Material Advantage:</b> The value of the pieces on the board, considering captures and losses.</p>
+                <p><b>Center Control:</b> Control over the central squares of the board, which is crucial for overall board dominance.</p>
+                <p><b>King Safety:</b> The safety of the king, including factors like castling and piece placement around the king.</p>
+                <p><b>Mobility:</b> The number of valid moves available, reflecting the flexibility and potential of pieces.</p>
+                <p><b>Attack Coverage:</b> The number of squares controlled or attacked, putting pressure on the opponent's pieces.</p>
+                <p><b>Defense Stance:</b> The defensive positioning of pieces, protecting against threats and securing key positions.</p>
+                
+        <h2>Feature Importance</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Importance</th>
+            </tr>
+        <tr><td>Material Advantage</td><td>0.0105383472316387</td></tr><tr><td>Center Control</td><td>1.7177645298337515e-06</td></tr><tr><td>King Safety</td><td>1.464427617159951e-06</td></tr><tr><td>Mobility</td><td>0.9894549589630592</td></tr><tr><td>Attack Coverage</td><td>1.5908193050449293e-06</td></tr><tr><td>Defense Stance</td><td>1.920793850048416e-06</td></tr></table>
+                
+        <h2>Score Calculation Formula</h2>
+        <p>The score for each move is calculated using the following formula:</p>
+        <p> <b>Score</b> = <br>
+          &emsp;&emsp;  0.0105383472316387 * Material Advantage +<br>  &emsp;&emsp;  1.7177645298337515e-06 * Center Control +<br>  &emsp;&emsp;  1.464427617159951e-06 * King Safety +<br>  &emsp;&emsp;  0.9894549589630592 * Mobility +<br>  &emsp;&emsp;  1.5908193050449293e-06 * Attack Coverage +<br>  &emsp;&emsp;  1.920793850048416e-06 * Defense Stance </p>
+                <h2>Current Feature Values</h2>
+                <p><b>Chosen Move Feature Values:</b> Material Advantage: 0.00, Center Control: 4.00, King Safety: 30.00, Mobility: 22.00, Attack Coverage: 22.00, Defense Stance: 0.00</p>
+                <p><b>Best Move Feature Values:</b> Material Advantage: 0.00, Center Control: -7.00, King Safety: 30.00, Mobility: 24.00, Attack Coverage: -24.00, Defense Stance: 14.00</p>
+                <h2>Formulas Used</h2>
+                <p><b>For Chosen AI move:</b> feature_diff = chosen_move_features - best_features</p>
+                <p><b>For Comparison:</b> feature_diff = comparison_move_features - chosen_move_features</p>
+                <h2>Chosen Move Explanation</h2>
+                <table>
+                    <tbody>
+                        
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr><td>Material Advantage</td><td>No impact</td></tr><tr><td>Center Control</td><td>Improved by 11.00</td></tr><tr><td>King Safety</td><td>No impact</td></tr><tr><td>Mobility</td><td>Reduced by 2.00</td></tr><tr><td>Attack Coverage</td><td>Improved by 46.00</td></tr><tr><td>Defense Stance</td><td>Reduced by 14.00</td></tr></tbody></table>
+                    </tbody>
+                </table>
+                
+        <h2>Comparison with Other Valid Moves</h2>
+        <table>
+            <tr>
+                <th>Move</th>
+                <th>Material Advantage</th><th>Center Control</th><th>King Safety</th><th>Mobility</th><th>Attack Coverage</th><th>Defense Stance</th>
+            </tr>
+            <tr class="highlight">
+                <td>Nc6</td>
+                <td>0.00</td><td>4.00</td><td>30.00</td><td>22.00</td><td>22.00</td><td>0.00</td>
+            </tr>
+        
+            <tr>
+                <td>Na5</td>
+                <td>0.00</td><td>-1.00</td><td>30.00</td><td>21.00</td><td>-21.00</td><td>12.00</td>
+            </tr>
+            
+            <tr>
+                <td>b5</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>25.00</td><td>-25.00</td><td>14.00</td>
+            </tr>
+            
+            <tr>
+                <td>Nb4</td>
+                <td>0.00</td><td>-2.50</td><td>30.00</td><td>25.00</td><td>-25.00</td><td>12.00</td>
+            </tr>
+            
+            <tr>
+                <td>Ne5</td>
+                <td>0.00</td><td>-3.50</td><td>30.00</td><td>24.00</td><td>-26.00</td><td>12.00</td>
+            </tr>
+            
+            <tr>
+                <td>h5</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>24.00</td><td>-24.00</td><td>12.00</td>
+            </tr>
+            
+            <tr>
+                <td>h6</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>21.00</td><td>-21.00</td><td>10.00</td>
+            </tr>
+            
+            <tr>
+                <td>g5</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>25.00</td><td>-25.00</td><td>18.00</td>
+            </tr>
+            
+            <tr>
+                <td>g6</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>23.00</td><td>-23.00</td><td>14.00</td>
+            </tr>
+            
+            <tr>
+                <td>Nh6</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>22.00</td><td>-22.00</td><td>18.00</td>
+            </tr>
+            
+            <tr>
+                <td>a6</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>23.00</td><td>-23.00</td><td>6.00</td>
+            </tr>
+            
+            <tr>
+                <td>Nd4</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>27.00</td><td>-29.00</td><td>12.00</td>
+            </tr>
+            
+            <tr>
+                <td>a5</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>24.00</td><td>-24.00</td><td>8.00</td>
+            </tr>
+            
+            <tr>
+                <td>b6</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>23.00</td><td>-23.00</td><td>10.00</td>
+            </tr>
+            
+            <tr>
+                <td>Rb8</td>
+                <td>0.00</td><td>-4.00</td><td>30.00</td><td>21.00</td><td>-21.00</td><td>-14.00</td>
+            </tr>
+            
+            <tr>
+                <td>Nb8</td>
+                <td>0.00</td><td>-1.00</td><td>30.00</td><td>20.00</td><td>-20.00</td><td>-14.00</td>
+            </tr>
+            
+            <tr>
+                <td>f6</td>
+                <td>0.00</td><td>-4.00</td><td>29.00</td><td>21.00</td><td>-21.00</td><td>14.00</td>
+            </tr>
+            
+            <tr>
+                <td>d6</td>
+                <td>0.00</td><td>-4.00</td><td>29.00</td><td>28.00</td><td>-28.00</td><td>20.00</td>
+            </tr>
+            
+            <tr>
+                <td>d5</td>
+                <td>0.00</td><td>-5.00</td><td>29.00</td><td>31.00</td><td>-33.00</td><td>24.00</td>
+            </tr>
+            
+            <tr>
+                <td>e6</td>
+                <td>0.00</td><td>-4.00</td><td>29.00</td><td>33.00</td><td>-33.00</td><td>20.00</td>
+            </tr>
+            
+            <tr>
+                <td>f5</td>
+                <td>0.00</td><td>-4.00</td><td>29.00</td><td>24.00</td><td>-24.00</td><td>18.00</td>
+            </tr>
+            
+            <tr>
+                <td>e5</td>
+                <td>0.00</td><td>-3.50</td><td>29.00</td><td>34.00</td><td>-36.00</td><td>24.00</td>
+            </tr>
+            </table>
+                <table>
+                    <tbody>
+                        
+        <h2>Comparison Explanation</h2>
+        <table>
+            <tr>
+                <th>Move</th>
+                <th>Material Advantage</th><th>Center Control</th><th>King Safety</th><th>Mobility</th><th>Attack Coverage</th><th>Defense Stance</th>
+            </tr>
+        
+            <tr class="highlight">
+                <td>Nc6</td>
+                <td>No impact</td><td>Improved by 11.00</td><td>No impact</td><td>Reduced by 2.00</td><td>Improved by 46.00</td><td>Reduced by 14.00</td>
+            </tr>
+        <tr><td>If the AI had chosen Na5</td><td> No difference</td><td> Better by 5.00</td><td> No difference</td><td> Better by 1.00</td><td> Better by 43.00</td><td> Worse by 12.00</td></tr><tr><td>If the AI had chosen b5</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 3.00</td><td> Better by 47.00</td><td> Worse by 14.00</td></tr><tr><td>If the AI had chosen Nb4</td><td> No difference</td><td> Better by 6.50</td><td> No difference</td><td> Worse by 3.00</td><td> Better by 47.00</td><td> Worse by 12.00</td></tr><tr><td>If the AI had chosen Ne5</td><td> No difference</td><td> Better by 7.50</td><td> No difference</td><td> Worse by 2.00</td><td> Better by 48.00</td><td> Worse by 12.00</td></tr><tr><td>If the AI had chosen h5</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 2.00</td><td> Better by 46.00</td><td> Worse by 12.00</td></tr><tr><td>If the AI had chosen h6</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Better by 1.00</td><td> Better by 43.00</td><td> Worse by 10.00</td></tr><tr><td>If the AI had chosen g5</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 3.00</td><td> Better by 47.00</td><td> Worse by 18.00</td></tr><tr><td>If the AI had chosen g6</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 1.00</td><td> Better by 45.00</td><td> Worse by 14.00</td></tr><tr><td>If the AI had chosen Nh6</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> No difference</td><td> Better by 44.00</td><td> Worse by 18.00</td></tr><tr><td>If the AI had chosen a6</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 1.00</td><td> Better by 45.00</td><td> Worse by 6.00</td></tr><tr><td>If the AI had chosen Nd4</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 5.00</td><td> Better by 51.00</td><td> Worse by 12.00</td></tr><tr><td>If the AI had chosen a5</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 2.00</td><td> Better by 46.00</td><td> Worse by 8.00</td></tr><tr><td>If the AI had chosen b6</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Worse by 1.00</td><td> Better by 45.00</td><td> Worse by 10.00</td></tr><tr><td>If the AI had chosen Rb8</td><td> No difference</td><td> Better by 8.00</td><td> No difference</td><td> Better by 1.00</td><td> Better by 43.00</td><td> Better by 14.00</td></tr><tr><td>If the AI had chosen Nb8</td><td> No difference</td><td> Better by 5.00</td><td> No difference</td><td> Better by 2.00</td><td> Better by 42.00</td><td> Better by 14.00</td></tr><tr><td>If the AI had chosen f6</td><td> No difference</td><td> Better by 8.00</td><td> Better by 1.00</td><td> Better by 1.00</td><td> Better by 43.00</td><td> Worse by 14.00</td></tr><tr><td>If the AI had chosen d6</td><td> No difference</td><td> Better by 8.00</td><td> Better by 1.00</td><td> Worse by 6.00</td><td> Better by 50.00</td><td> Worse by 20.00</td></tr><tr><td>If the AI had chosen d5</td><td> No difference</td><td> Better by 9.00</td><td> Better by 1.00</td><td> Worse by 9.00</td><td> Better by 55.00</td><td> Worse by 24.00</td></tr><tr><td>If the AI had chosen e6</td><td> No difference</td><td> Better by 8.00</td><td> Better by 1.00</td><td> Worse by 11.00</td><td> Better by 55.00</td><td> Worse by 20.00</td></tr><tr><td>If the AI had chosen f5</td><td> No difference</td><td> Better by 8.00</td><td> Better by 1.00</td><td> Worse by 2.00</td><td> Better by 46.00</td><td> Worse by 18.00</td></tr><tr><td>If the AI had chosen e5</td><td> No difference</td><td> Better by 7.50</td><td> Better by 1.00</td><td> Worse by 12.00</td><td> Better by 58.00</td><td> Worse by 24.00</td></tr></table>
+                    </tbody>
+                </table>
+                <h2>SHAP Explanation</h2>
+                <p><b>SHAP values:</b> [[ 0.    -1.042  0.    -0.036  0.     0.   ]]</p>
+                <p><b>SHAP values shape:</b> (1, 6)</p>
+                <iframe src="shap_plot.html" width="100%" height="600px"></iframe>
+                <h2>LIME Explanation</h2>
+                <iframe src="lime_explanation.html" width="100%" height="600px"></iframe>
+            </body>
+            </html>
+            
